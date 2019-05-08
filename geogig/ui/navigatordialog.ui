@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DockWidget</class>
+ <widget class="QDockWidget" name="DockWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>344</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="floating">
+   <bool>false</bool>
+  </property>
+  <property name="allowedAreas">
+   <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+  </property>
+  <property name="windowTitle">
+   <string>&amp;GeoGig Navigator</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QTreeWidget" name="repoTree">
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="uniformRowHeights">
+        <bool>true</bool>
+       </property>
+       <attribute name="headerVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="headerStretchLastSection">
+        <bool>true</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string notr="true">1</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QWidget" name="descriptionWidget" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>200</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionAddGeoGigServer">
+   <property name="text">
+    <string>Add GeoGig server</string>
+   </property>
+   <property name="toolTip">
+    <string>Add GeoGig server</string>
+   </property>
+  </action>
+  <action name="actionShowFilter">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show Filter</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Filter</string>
+   </property>
+  </action>
+  <action name="actionRefresh">
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+   <property name="toolTip">
+    <string>Refresh</string>
+   </property>
+  </action>
+  <action name="actionAddLayer">
+   <property name="text">
+    <string>Add layer to repository...</string>
+   </property>
+   <property name="toolTip">
+    <string>Add layer to repository...</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>Remove</string>
+   </property>
+   <property name="toolTip">
+    <string>Remove selected element</string>
+   </property>
+  </action>
+  <action name="actionCreateRepository">
+   <property name="text">
+    <string>Create new repository</string>
+   </property>
+   <property name="toolTip">
+    <string>Create new repository</string>
+   </property>
+  </action>
+  <action name="actionEdit">
+   <property name="text">
+    <string>Edit</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="toolTip">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionManageRemotes">
+   <property name="text">
+    <string>Manage remotes</string>
+   </property>
+   <property name="toolTip">
+    <string>Manage remotes</string>
+   </property>
+  </action>
+  <action name="actionPull">
+   <property name="text">
+    <string>Pull</string>
+   </property>
+   <property name="toolTip">
+    <string>Pull from remote</string>
+   </property>
+  </action>
+  <action name="actionPush">
+   <property name="text">
+    <string>Push</string>
+   </property>
+   <property name="toolTip">
+    <string>Push to remote</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

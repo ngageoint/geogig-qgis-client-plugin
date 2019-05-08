@@ -1,0 +1,163 @@
+This is a list of functionality to test in the Geogig Client QGIS plugin.
+
+Preparation:
+------------
+
+To prepare the server so it contains a set of test repositories, follow these steps:
+
+Make sure you have a running repo that allows connection with admin/g30g1g credentials.
+Run the repotests.py script from within QGIS, typing this in the QGIS Python Console:
+
+	from geogig.tests.repotests import createTestScenario
+	createTestScenario()
+
+Now the server should contain the following repos:
+
+	rootrepo
+	conflicted
+	nonconflicted
+	forkedrepo
+
+And the following users:
+
+	testuser1 (password:abcd)
+	testuser2 (password:abcd)
+
+In this folder you will also find a test data layer named 'squares.geojson'
+
+Functionality to test
+======================
+
+Navigator
+**********
+
+-Add a server
+-Connect to a server 
+-Reboot QGIS (it should remember the server you added in a previous step)
+-Remove server
+-Reboot QGIS (it should not remember the server you removed in the previous step)
+-Add a wrong url and try to connect to it. A warnigin message sould be shown in the message bar
+-Add a correct server url and try to connect to it with wrong credentials. A warning message sould be shown in the message bar
+
+
+-Connect to the server as 'testuser1' and create a repository named 'mynewrepo'
+-Try to create another repository also named 'mynewrepo'. A warning message should be shown in the meesage bar
+-Delete repository 'mynewrepo'
+-Create the 'mynewrepo' repository again
+-Add the squares.geojson layer to the 'mynewrepo' repo, using the contet menu in both the repo item and in the layers item
+-Open the log of the repo
+-Open the log of the 'squares' layer in the repo
+
+
+-Add a layer to the current QGIS project (both as live connection and as file)
+
+History viewer
+***************
+
+-Check geometry changes are correctly displayed when they exist.
+-Check that a "No geometry changes" is shown when the commit only has changes in attributes
+-Check that attribute changes are correctly displayed
+-Right click on a commit and check it correctly adds layer to project (both as file and as live connection)
+
+Constellation viewer
+********************
+
+-Check that repos not belonging to the current user (testuser1) have less buttons enabled than the rest of repos.
+
+-Fork the "rootrepo" repo and name the fork "rootrepo_2". Check that both the navigator and the constellation viewer are updated.
+-Try forking the "rootrepo" repo with the same name. Verify that it shows a message warning that a repo with that name already exist.
+-Delete the "rootrepo_2" repo. Check that both the navigator and the constellation viewer are updated.
+-Open the PR viewer clicking on the "view" button
+-Show log of a repo.
+-Show log of a layer
+-Show layer info
+-Add a layer to the current QGIS project (both as live connection and as file)
+-Verify that mouse wheel zooms correctly
+-Right click on the canvas and verify the zoom commands work correctly
+
+PR viewer
+**********
+
+-Open the PR viewer by selecting a PR of the "testrepo1" repo in the navigator, and then selecting "View" in the context menu of the PR item
+-Ensure that the PR selected in the combo box is the selected one.
+-Modify the selected PR in the combo box and ensure that the content of the tabs changes accordingly
+-Ensure that the content of the tabs is correct for commits that modify geometrys and for those that don't
+
+
+Edit workflow
+*************
+
+The following tests should be performed with a geogig layer exported as a file, and with a geogig layer exported as a live link.
+
+-Export layer from repo into current qgis project.
+-Start editing layer
+-Verify it informs of features not being at full detail.
+-Make edits in the layer.
+-Stop editing and save changes
+-Enter a commit message and press OK
+-Verify that a new commit has been added.
+-Right click on layer and select "geogig/layer info"
+-Verify the layer commit has been changed to match the current head commit
+
+
+-Export layer from repo into current qgis project.
+-Start editing layer
+-Verify it informs of features not being at full detail.
+-Make edits in the layer.
+-Stop editing and save changes
+-Do not enter a commit message. Press Cancel
+-Verify that it shows a message saying that changes cannot be saved and you need a project to save them
+
+-Export layer from repo into current qgis project.
+-Save project
+-Start editing layer
+-Verify it informs of features not being at full detail. (only for live layers)
+-Make edits in the layer.
+-Stop editing and save changes
+-Do not enter a commit message. Press Cancel
+-Verify that it shows a message saying that changes have been stored.
+-Close the current project
+-Reopen the project and ensure that your changes are there
+-Open the layer info and verify that it shows that the layer has local not yet commited
+-Start editing
+-Close editing without making any changes.
+-Enter a commit message and press OK
+-Verify that a new commit has been added.
+-Right click on layer and select "geogig/layer info"
+-Verify the layer commit has been changed to match the current head commit
+
+-Export layer from repo into current qgis project, as a live link.
+-Save project
+-Start editing layer
+-Verify it informs of features not being at full detail. (only for live layers)
+-Make edits in the layer.
+-Stop editing and save changes
+-Do not enter a commit message. Press Cancel
+-Verify that it shows a message saying that changes have been stored.
+-Close the current project
+-Delete the repo from which the layer comes
+-Open project
+-Check that a warning message is shown to inform that the layer cannot be populated
+
+-Export layer from repo into current qgis project. Do not use head version, but a previous commit instead
+-Start editing layer
+-Verify it informs of features not being at full detail. (only for live layers)
+-Make non-conflicting edits in the layer.
+-Stop editing and save changes
+-Enter a commit message and press OK
+-Verify that a new commit has been added.
+-Right click on layer and select "geogig/layer info"
+-Verify the layer commit has been changed to match the current head commit
+-Verify that the changes in the commits ahead of the one from which the layer was exported have been added to the layer
+
+-Export layer from repo into current qgis project. Do not use head version, but a previous commit instead
+-Start editing layer
+-Verify it informs of features not being at full detail. (only for live layers)
+-Make conflicting edits in the layer.
+-Stop editing and save changes
+-Enter a commit message and press OK
+-Verify that conflicts dialog is shown
+-Resolve conflicts and close to commit
+-Verify that a new commit has been added.
+-Right click on layer and select "geogig/layer info"
+-Verify the layer commit has been changed to match the current head commit

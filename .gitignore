@@ -1,0 +1,170 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# dotenv
+.env
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+EGG-INFO/
+_pydev_bundle/
+_pydev_imps/
+_pydev_runfiles/
+_pydevd_bundle/
+_pydevd_frame_eval/
+build_tools/
+interpreterInfo.py
+pycompletionserver.py
+pydev_app_engine_debug_startup.py
+pydev_coverage.py
+pydev_ipython/
+pydev_pysrc.py
+pydev_run_in_console.py
+pydev_sitecustomize/
+pydevconsole.py
+pydevd.py
+pydevd_attach_to_process/
+pydevd_concurrency_analyser/
+pydevd_file_utils.py
+pydevd_plugins/
+runfiles.py
+setup_cython.py
+stubs/
+test_pydevd_reload/
+tests_pydevd/
+tests_pydevd_mainloop/
+tests_pydevd_python/
+tests_pydevd_runfiles/
+third_party
+.idea/
+geogig/extlibs/Jinja2-2.10.dist-info/
+geogig/extlibs/Jinja2-2.10.dist-info/
+geogig/extlibs/Pygments-2.2.0.dist-info/
+geogig/extlibs/Shapely-1.6.4.post1.dist-info/
+geogig/extlibs/certifi-2018.4.16.dist-info/
+geogig/extlibs/certifi/
+geogig/extlibs/chardet-3.0.4.dist-info/
+geogig/extlibs/chardet/
+geogig/extlibs/dateutil/
+geogig/extlibs/easy_install.py
+geogig/extlibs/geojson-2.3.0.dist-info/
+geogig/extlibs/geojson/
+geogig/extlibs/idna-2.6.dist-info/
+geogig/extlibs/idna/
+geogig/extlibs/jinja2/
+geogig/extlibs/markupsafe/
+geogig/extlibs/owslib/
+geogig/extlibs/pkg_resources/
+geogig/extlibs/protobuf-3.5.2.post1-py3.6-nspkg.pth
+geogig/extlibs/protobuf-3.5.2.post1.dist-info/
+geogig/extlibs/psycopg2-2.7.4.dist-info/
+geogig/extlibs/psycopg2/
+geogig/extlibs/pygments/
+geogig/extlibs/pyproj/
+geogig/extlibs/python_dateutil-2.7.2.dist-info/
+geogig/extlibs/pytz-2018.4.dist-info/
+geogig/extlibs/pytz/
+geogig/extlibs/requests-2.18.4.dist-info/
+geogig/extlibs/requests/
+geogig/extlibs/setuptools-39.1.0.dist-info/
+geogig/extlibs/setuptools/
+geogig/extlibs/shapely/
+geogig/extlibs/six-1.11.0.dist-info/
+geogig/extlibs/urllib3-1.22.dist-info/
+geogig/extlibs/urllib3/
+extlibs
+geogig*.tar*

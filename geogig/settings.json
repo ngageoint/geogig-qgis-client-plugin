@@ -1,0 +1,22 @@
+[{"name":"gpkgfolder",
+     "label": "Base folder for repository data",
+     "description": "Base folder for repository gpkg data",
+     "type": "folder",
+     "default": "",
+     "group": "General"
+    },
+    {"name":"difffolder",
+     "label": "Base folder for diff files",
+     "description": "Base folder for diff files",
+     "type": "folder",
+     "default": "",
+     "group": "General"
+    },
+    {"name":"removedifffiles",
+     "label": "Automatically remove diff files when closing",
+     "description": "Automatically remove diff files when closing QGIS",
+     "type": "bool",
+     "default": false,
+     "group": "General"
+    }
+]

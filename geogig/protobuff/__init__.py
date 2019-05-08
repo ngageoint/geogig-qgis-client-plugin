@@ -1,0 +1,2 @@
+def REQUIRED_FOR_QGIS_MODULE_LOADING():
+    pass
